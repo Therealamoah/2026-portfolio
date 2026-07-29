@@ -1,0 +1,654 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collins Amoah | Full Stack Developer</title>
+    <!-- SEO TAGS -->
+    <meta name="description" content="Collins Amoah is a Full Stack Developer based in Ghana, specializing in React, Node.js, Tailwind CSS, Firebase, and building scalable web applications.">
+    <meta name="keywords" content="Collins Amoah, full stack developer, web developer, React developer, Node.js, Ghana, MERN stack, portfolio">
+    <meta name="author" content="Collins Amoah">
+    <meta name="google-site-verification" content="12JOV7200nQroMoi8VKMTovNu7Q2GR9JDN2d_BLmVnQ" />
+    <!-- icon as a favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="Images/Colnett copy 2.png">
+    <!-- Fonts & Icons -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+     <script>
+      tailwind.config = { darkMode: 'class',}
+      </script>
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     
+</head>
+<body class="bg-slate-900 text-white scroll-smooth">
+
+    <!-- Header -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 px-6 md:px-20 py-4 flex bg-[#1f2937] justify-between items-center shadow-md">
+    <!-- Logo -->
+    <a href="#home"
+      class="text-2xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+      Collins Kwame Amoah
+    </a>
+
+    <!-- Mobile Menu Icon -->
+    <i id="menu-btn" class='bx bx-menu text-4xl md:hidden cursor-pointer'></i>
+
+    <!-- Navigation Links (Desktop) -->
+    <nav class="hidden md:flex space-x-6 text-lg">
+      <a href="#home" class="text-orange-300 hover:text-orange-400 font-semibold">Home</a>
+      <a href="#about" class="hover:text-orange-400">About</a>
+      <a href="#skills" class="hover:text-orange-400">Skills</a>
+      <a href="#project" class="hover:text-orange-400">Projects</a>
+      <a href="#getInTouch" class="hover:text-orange-400">Get In Touch</a>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <nav id="mobile-menu"
+      class="hidden absolute top-full left-0 w-full bg-gray-800 flex-col items-center text-lg space-y-4 py-4 md:hidden">
+      <a href="#home" class="block text-orange-300 hover:text-orange-400 font-semibold">Home</a>
+      <a href="#about" class="block hover:text-orange-400">About</a>
+      <a href="#skills" class="block hover:text-orange-400">Skills</a>
+      <a href="#project" class="block hover:text-orange-400">Projects</a>
+      <a href="#getInTouch" class="block hover:text-orange-400">Get In Touch</a>
+    </nav>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+
+      // Toggle icon between menu and X
+      if (mobileMenu.classList.contains('hidden')) {
+        menuBtn.classList.remove('bx-x');
+        menuBtn.classList.add('bx-menu');
+      } else {
+        menuBtn.classList.remove('bx-menu');
+        menuBtn.classList.add('bx-x');
+      }
+    });
+  </script>
+
+  <!-- Navigation Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+   <!-- Home Section -->
+  <section id="home" class="min-h-screen pt-28 px-6 md:px-20 lg:px-40 flex flex-col md:flex-row items-center gap-10">
+    <!-- Text Content -->
+    <div class="flex-1">
+      <h2 class="text-lg sm:text-xl mb-4">Hi There!</h2>
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-2">I'm Collins</h1>
+      <h2 class="text-lg sm:text-xl mb-6">
+        A <span id="typewriter" class="text-orange-400 font-semibold"></span>
+      </h2>
+
+       <!-- Typewriter Effect Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const fullText = "Full Stack Developer || Front-End Developer || Back-End Developer || Software Engineer";
+          const el = document.getElementById("typewriter");
+
+          let index = 0;
+          let typing = true;
+
+          function typeLoop() {
+            if (typing) {
+              el.textContent = fullText.slice(0, index++);
+              if (index > fullText.length) {
+                typing = false;
+                setTimeout(typeLoop, 2000); // wait before deleting
+                return;
+              }
+            } else {
+              el.textContent = fullText.slice(0, --index);
+              if (index === 0) typing = true;
+            }
+            setTimeout(typeLoop, 100);
+          }
+          typeLoop();
+        });
+      </script>
+
+      <p class="text-base sm:text-lg leading-relaxed mb-4">
+       Creating dynamic, mobile-friendly websites and strategic digital solutions that drive growth and elevate your brand's online presence.
+      </p>
+
+      <h2 class="text-lg sm:text-xl mb-6">
+        <span id="drawText" class="text-orange-400 font-medium"></span>
+      </h2>
+
+       <!-- Social Links -->
+      <div class="flex space-x-4 mb-6">
+        <a href="https://wa.me/233596269011" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-whatsapp text-3xl text-green-500'></i>
+        </a>
+        <a href="mailto:collinsamoah594@gmail.com"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bx-envelope text-3xl text-red-500'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/collins-kwame-amoah-624a86226/" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-linkedin-square text-3xl text-blue-500'></i>
+        </a>
+        <a href="https://github.com/Therealamoah" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-github text-3xl text-gray-300'></i>
+        </a>
+      </div>
+
+      <!-- Download CV Button -->
+      <a href="https://docs.google.com/document/d/1rMu24ia8nCyFgP3FUpfKgS-0jPXYIfKz/edit?usp=sharing&ouid=113860712487533309840&rtpof=true&sd=true" target="_blank"
+        class="inline-block bg-orange-400 text-[#323946] font-semibold px-6 py-2 rounded-full shadow transform transition-transform duration-300 hover:scale-105">
+        View Resume
+      </a>
+    </div>
+
+    <!-- Profile Image -->
+    <div
+      class="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-lg border-2 border-orange-400 animate-[floatImage_3s_ease-in-out_infinite]">
+      <img src="Images/Gemini_Generated_Image_vf10kgvf10kgvf10.jpg" alt="Collins" class="w-full h-full object-cover transform scale-110" />
+    </div>
+  </section>
+
+  <hr class="w-0/7 border-gray-800">
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 md:px-[5%] text-white">
+
+    <!-- Section Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">
+      <span class="border-b-4 border-orange-400 pb-2 inline-block">
+        About <span class="text-orange-400">Me</span>
+      </span>
+    </h2>
+
+    <!-- Flex Container -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
+
+      <!-- Image -->
+      <div class="w-full max-w-lg h-64 sm:h-72 md:h-80 lg:h-96">
+        <img src="Images/Gemini_Generated_Image_vf10kgvf10kgvf10.jpg" alt="Background"
+          class="w-full h-full object-cover rounded-lg animate-[floatImage_3s_ease-in-out_infinite]" />
+      </div>
+
+       <!-- Content -->
+      <div class="max-w-2xl text-center md:text-left">
+        <p class="text-base sm:text-lg mb-8 leading-relaxed">
+         I am a Full-Stack Software Developer with 3+ years of experience building scalable web applications that solve real-world problems. I work across frontend and backend using HTML, CSS, JavaScript, React.js, Tailwind CSS, the MERN stack, Firebase, and Supabase to deliver responsive, high-performance digital products.<br> <br>
+         I focus on clean, maintainable code and practical solutions aligned with user needs and business goals developing intuitive interfaces alongside robust backend systems and APIs.
+
+         <br> <br> With a background in graphic design, I ensure strong visual structure, clear hierarchy, and consistent branding, transforming ideas into polished, user-focused products.
+
+         I continuously refine my skills and stay current with modern technologies, aiming to build solutions that drive value and support business growth.
+        </p>
+        <a href="#about"
+          class="group inline-flex items-center gap-2 px-6 py-2 border-2 border-white rounded-xl transition-transform duration-300 hover:bg-slate-800 hover:text-orange-600">
+
+          <!-- Text that moves -->
+          <span class="transform transition-transform duration-300 group-hover:translate-x-2">
+            Read More
+          </span>
+
+          <!-- Arrow that moves together -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-6 md:px-16 text-center">
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-white">
+      <span class="border-b-4 border-orange-400 text-orange-400">Skills</span>
+    </h2>
+
+    <!-- Skills Container -->
+    <div class="flex flex-wrap justify-center gap-6" id="skills-container"></div>
+
+    <script>
+      // Skills Data
+      const skills = [
+        { name: "HTML", icon: "Images/html.svg", percent: 95 },
+        { name: "CSS", icon: "Images/css.svg", percent: 95 },
+        { name: "Tailwind", icon: "Images/tailwind.svg", percent: 95 },
+        { name: "JavaScript", icon: "Images/javascript.svg", percent: 80 },
+        { name: "React", icon: "Images/react.svg", percent: 85 },
+        { name: "VSCode", icon: "Images/vscode.svg", percent: 80 },
+        { name: "GitHub", icon: "Images/Github.svg", percent: 70 },
+        { name: "Responsive Web Design", icon: "Images/responsive-svgrepo-com.svg", percent: 90 },
+        { name: "state Management", icon: "Images/mobx-svgrepo-com.svg", percent: 75   },
+        { name: "Web Design", icon: "Images/web design.svg", percent: 80 },
+        { name: "Web Development", icon: "Images/web development.svg", percent: 60 },
+        { name: "Git", icon: "Images/git-icon-logo-svgrepo-com.svg", percent: 70 },
+        { name: "Lead Generation", icon: "Images/lead generation.svg", percent: 90 },
+        { name: "Firebase", icon: "Images/Firebase icon Logo PNG SVG Vector.svg", percent: 85 },
+        { name: "Nodejs", icon: "Images/nodejs-icon-svgrepo-com.svg", percent: 80 },
+        { name: "Express", icon: "Images/express-svgrepo-com.svg", percent: 80 },
+        { name: "Supabase", icon: "Images/icons8-supabase.svg", percent: 80 },
+        { name: "MongoDB", icon: "Images/mongodb-svgrepo-com.svg", percent: 80 },
+      ];
+
+      // Render Skills
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("skills-container");
+
+        skills.forEach((skill, i) => {
+          const box = document.createElement("div");
+          box.className = "flex flex-col items-center justify-center w-36 sm:w-40 h-36 sm:h-40 bg-[#111827] rounded-lg shadow-md p-4 hover:shadow-xl transition";
+
+          // Skill Icon
+          const img = document.createElement("img");
+          img.src = skill.icon;
+          img.alt = `${skill.name} Icon`;
+          img.className = "w-12 h-12 mb-2";
+
+          // Skill Name
+          const span = document.createElement("span");
+          span.className = "text-sm font-semibold text-white";
+          span.textContent = skill.name;
+
+          // Progress Bar
+          const barContainer = document.createElement("div");
+          barContainer.className = "w-full h-2 bg-gray-700 rounded-full mt-3 overflow-hidden";
+
+          const bar = document.createElement("div");
+          bar.className = "h-full bg-orange-400 rounded-full";
+          bar.style.width = "0%";
+
+          // Animate bar fill
+          setTimeout(() => {
+            bar.style.width = skill.percent + "%";
+          }, 100 * i);
+
+          barContainer.appendChild(bar);
+          box.appendChild(img);
+          box.appendChild(span);
+          box.appendChild(barContainer);
+          container.appendChild(box);
+        });
+      });
+    </script>
+  </section>
+
+  <hr class="w-0/7 border-gray-800">
+
+  <!-- Projects Section -->
+  <section id="project" class="py-20 px-6 md:px-16">
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-10">
+      <span class="border-b-4 border-orange-400 text-orange-400">Projects</span>
+    </h2>
+
+    <!-- Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      <!-- Project Card 1 -->
+      <div class="project-card gradient-border rounded-xl overflow-hidden bg-slate-800">
+        <!-- Image Section -->
+        <div class="relative w-full h-52 group">
+          <img src="Images/Portfolio.png" alt="My Portfolio" class="w-full h-full object-cover">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/10 to-orange-500 flex flex-col justify-center items-center text-center p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h4 class="text-xl text-white font-semibold mb-1">My Portfolio</h4>
+            <p class="text-[15px] text-white mb-12">My Experience, Skills, & Projects.</p>
+
+            <a href="https://2026-portfolio-9qm6.vercel.app/" target="_blank" aria-label="View My Portfolio Live"
+              class="flex items-center justify-center w-7 h-7 border border-white/40 rounded-md hover:bg-white/50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-4">
+          <div class="mb-2 flex items-center">
+            <span class="text-xs text-orange-400 font-semibold px-2 py-0.5 border border-orange-400 rounded-full">
+              Portfolio
+            </span>
+
+            <div class="flex-1 flex justify-center">
+              <a href="https://2026-portfolio-9qm6.vercel.app/" target="_blank"
+                class="px-2.5 py-0.5 bg-orange-600 text-white text-xs rounded-md font-medium hover:bg-white hover:text-orange-600 transition">
+                View Live
+              </a>
+            </div>
+          </div>
+
+          <p class="text-gray-400 mt-2 text-left text-sm leading-relaxed">
+            This project showcases my skills in modern web design and development, featuring a responsive layout and
+            visually engaging interface across all devices.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card gradient-border rounded-xl overflow-hidden bg-slate-800">
+        <!-- Image Section -->
+        <div class="relative w-full h-52 group">
+          <img src="Images/santus farm.png" alt="Santus Farms" class="w-full h-full object-cover">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/10 to-orange-500 flex flex-col justify-center items-center text-center p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h4 class="text-xl text-white font-semibold mb-1">Farm Management System</h4>
+            <p class="text-[15px] text-white mb-12">A full-stack Farm Management and E-commerce System with user purchasing features and an admin dashboard for product, order, and inventory management.</p>
+
+            <a href="https://sanctus-farms.vercel.app/" target="_blank"
+              aria-label="View santus farm Live"
+              class="flex items-center justify-center w-7 h-7 border border-white/40 rounded-md hover:bg-white/50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-4">
+          <div class="mb-2 flex items-center">
+            <span class="text-xs text-orange-400 font-semibold px-2 py-0.5 border border-orange-400 rounded-full">
+              Santus Farms
+            </span>
+
+            <div class="flex-1 flex justify-center">
+              <a href="https://sanctus-farms.vercel.app/" target="_blank"
+                class="px-2.5 py-0.5 bg-orange-600 text-white text-xs rounded-md font-medium hover:bg-white hover:text-orange-600 transition">
+                View Live
+              </a>
+            </div>
+            
+          </div>
+
+          <p class="text-gray-400 mt-2 text-left text-sm leading-relaxed">
+            A full-stack Farm Management and E-commerce System with user purchasing features and an admin dashboard for product, order, and inventory management.
+            Built with React 19, Vite, Tailwind CSS, and Lucide Icons. Backend powered by Firebase (Firestore, Authentication, Hosting), with Paystack for payments, Recharts for analytics, React Context for state management, and React Router for navigation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card gradient-border rounded-xl overflow-hidden bg-slate-800">
+        <!-- Image Section -->
+        <div class="relative w-full h-52 group">
+          <img src="Images/fakenews.png" alt="Check Dem" class="w-full h-full object-cover">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/10 to-orange-500 flex flex-col justify-center items-center text-center p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h4 class="text-xl text-white font-semibold mb-1">CheckDEM</h4>
+            <p class="text-[15px] text-white mb-12">CHECKDEM</p>
+
+            <a href="https://fake-news-self.vercel.app/" target="_blank" aria-label="View My Portfolio Live"
+              class="flex items-center justify-center w-7 h-7 border border-white/40 rounded-md hover:bg-white/50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-4">
+          <div class="mb-2 flex items-center">
+            <span class="text-xs text-orange-400 font-semibold px-2 py-0.5 border border-orange-400 rounded-full">
+              fake news detection app
+            </span>
+
+            <div class="flex-1 flex justify-center">
+              <a href="https://fake-news-self.vercel.app/" target="_blank"
+                class="px-2.5 py-0.5 bg-orange-600 text-white text-xs rounded-md font-medium hover:bg-white hover:text-orange-600 transition">
+                View Live
+              </a>
+            </div>
+          </div>
+
+          <p class="text-gray-400 mt-2 text-left text-sm leading-relaxed">
+            A smart application that analyzes news content and determines if it is real or fake.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-card gradient-border rounded-xl overflow-hidden bg-slate-800">
+        <!-- Image Section -->
+        <div class="relative w-full h-52 group">
+          <img src="Images/Inventory.png" alt="Inventory Management System" class="w-full h-full object-cover" />
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/10 to-orange-500 flex flex-col justify-center items-center text-center p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h4 class="text-xl text-white font-semibold mb-1">Inventory Management Sytem</h4>
+            <p class="text-[15px] text-white mb-12">Inventory Management Sytem</p>
+
+            <a href="https://inventory-management-app-beryl.vercel.app/" target="_blank" aria-label="View My Portfolio Live"
+              class="flex items-center justify-center w-7 h-7 border border-white/40 rounded-md hover:bg-white/50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-4">
+          <div class="mb-2 flex items-center">
+            <span class="text-xs text-orange-400 font-semibold px-2 py-0.5 border border-orange-400 rounded-full">
+             Inventory Management System
+            </span>
+
+            <div class="flex-1 flex justify-center">
+              <a href="https://inventory-management-app-beryl.vercel.app/" target="_blank"
+                class="px-2.5 py-0.5 bg-orange-600 text-white text-xs rounded-md font-medium hover:bg-white hover:text-orange-600 transition">
+                View Live
+              </a>
+            </div>
+          </div>
+
+          <p class="text-gray-400 mt-2 text-left text-sm leading-relaxed">
+            Inventory management System Built with React.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <!-- View More Projects Button with Border -->
+    <div class="flex justify-center mb-8">
+      <a href="projects.html"
+        class="group inline-flex items-center gap-2 px-6 py-2 border-2 border-white rounded-xl transition-transform duration-300 hover:bg-slate-800 hover:text-orange-600">
+
+        <!-- Text that moves -->
+        <span class="transform transition-transform duration-300 group-hover:translate-x-2">
+          View More Projects
+        </span>
+
+        <!-- Arrow that moves together -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <hr class="w-0/7 border-gray-800">
+
+   <hr class="w-0/7 border-gray-800">
+
+  <!-- Contact Section -->
+  <section id="getInTouch" class="py-16 px-6 md:px-16 text-white">
+
+    <!-- Section Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">
+      <span class="border-b-4 border-orange-400 text-orange-400">Get In Touch</span>
+    </h2>
+
+    <!-- Form Container -->
+    <form class="max-w-xl mx-auto bg-[#1f2937] p-8 rounded-lg shadow-md space-y-6"
+      action="https://formspree.io/f/xgolyeyy" method="POST">
+
+      <!-- Name Field -->
+      <div>
+        <label for="name" class="block text-sm font-medium mb-2">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required
+          class="w-full px-4 py-2 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400">
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required
+          class="w-full px-4 py-2 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400">
+      </div>
+
+      <!-- Phone number field -->
+      <div>
+        <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number"
+          class="w-full px-4 py-2 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400">
+      </div>
+
+      <!-- Message Field -->
+      <div>
+        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message" required
+          class="w-full px-4 py-2 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+        class="w-full bg-orange-400 text-[#0f172a] font-semibold py-2 rounded-md hover:bg-orange-300 transition">
+        Submit
+      </button>
+
+      <!-- OR Separator -->
+      <div class="flex items-center justify-center gap-4 my-4">
+        <hr class="w-1/4 border-gray-600">
+        <span class="text-gray-400 text-sm">OR</span>
+        <hr class="w-1/4 border-gray-600">
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex justify-center items-center space-x-6">
+        <a href="https://wa.me/233596269011" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-whatsapp text-3xl text-green-500'></i>
+        </a>
+        <a href="mailto:collinsamoah594@gmail.com"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bx-envelope text-3xl text-red-500'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/collins-kwame-amoah-624a86226/" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-linkedin-square text-3xl text-blue-500'></i>
+        </a>
+        <a href="https://github.com/Therealamoah" target="_blank"
+          class="transform transition-transform duration-300 hover:scale-125">
+          <i class='bx bxl-github text-3xl text-gray-300'></i>
+        </a>
+      </div>
+
+      <!-- Phone Number  -->
+      <div class="flex items-center justify-center gap-2 my-4">
+        <i class='bx bx-phone text-2xl text-white'></i>
+        <span class="text-gray-400 text-sm">+233 (0) 596269011</span>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="bg-[#1f2937] py-6 px-6 md:px-16 flex flex-col sm:flex-row justify-between items-center text-sm text-center sm:text-left space-y-4 sm:space-y-0">
+
+    <!-- Footer Text -->
+    <p class="absolute left-1/2 -translate-x-1/2 text-orange-400 text-center">
+      &copy; 2026 Colnett Creative Hub. All Rights Reserved.
+    </p>
+
+    <!-- Back to Top Arrow -->
+    <div class="ml-auto">
+      <a href="#home" id="backToTop" class="inline-block bg-orange-400 p-3 rounded-md hover:shadow-lg transition"
+        aria-label="Back to Top">
+        <i class='bx bxs-chevrons-up text-[#323946] text-xl'></i>
+      </a>
+    </div>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      document.getElementById("backToTop").addEventListener("click", function (e) {
+        e.preventDefault(); // Stop default jump behavior
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth" // Smooth scroll effect
+        });
+      });
+    </script>
+
+  </footer>
+
+  <script>
+  (function () {
+    const root = document.documentElement;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function applyTheme(e) {
+      if (e.matches) {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+    }
+
+    // Apply on load
+    applyTheme(prefersDark);
+
+    // Listen for system theme changes
+    prefersDark.addEventListener('change', applyTheme);
+  })();
+</script>
+
+
+
+
+    
+</body>
+</html>
