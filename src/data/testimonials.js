@@ -8,15 +8,15 @@ export const testimonials = [
     company: 'Santus Farms',
   },
   {
-    quote: 'Add a real client quote here — short, specific and results-focused works best.',
-    name: 'Client Name',
-    role: 'Role, Company',
-    company: 'Project worked on',
+    quote: 'Collins delivered a well-designed and functional fake news detection application that met our project requirements. He demonstrated strong technical skills, professionalism, and a commitment to delivering quality work. We were pleased with the final outcome.',
+    name: 'African University College of Commuications ( Project work )',
+    role: 'Journalism, Student',
+    company: 'Fake News Detection App',
   },
   {
-    quote: 'Add a real client quote here — short, specific and results-focused works best.',
-    name: 'Client Name',
-    role: 'Role, Company',
-    company: 'Project worked on',
+    quote: 'Collins was a great teammate to work with. He consistently delivered high-quality code, communicated well, and helped bring our project to completion. His attention to detail and problem-solving skills made a real difference.',
+    name: 'Kofi Okyere-Osei',
+    role: 'Full Stack Developer',
+    company: 'Project Partner',
   },
 ]
