@@ -9,7 +9,7 @@ const links = [
   { label: 'Email', href: 'mailto:collinsamoah594@gmail.com', icon: HiOutlineMail },
   {
     label: 'Resumé',
-    href: 'https://docs.google.com/document/d/1rMu24ia8nCyFgP3FUpfKgS-0jPXYIfKz/edit?usp=sharing&ouid=113860712487533309840&rtpof=true&sd=true',
+    href: 'https://drive.google.com/file/d/104WT9NA7q3ZmlGO1NSUXVdtlxpbFDJWr/view?usp=sharing',
     icon: FiFileText,
   },
 ]

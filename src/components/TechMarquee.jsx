@@ -9,7 +9,7 @@ function MarqueeRow({ reverse = false }) {
   return (
     <motion.div
       className="flex w-max gap-10"
-      animate={{ x: reverse ? ['0%', '30%', '0%'] : ['0%', '-30%', '0%'] }}
+      animate={{ x: reverse ? ['0%', '40%', '0%'] : ['0%', '-30%', '0%'] }}
       transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
     >
       {items.map((item, i) => (
